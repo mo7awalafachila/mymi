@@ -1,0 +1,65 @@
+{
+  "generated_at": "2025-11-14T21:17:29.781242+00:00",
+  "users": 5,
+  "days": 2,
+  "rows": 14400,
+  "seed": 42,
+  "signals": [
+    "heart_rate",
+    "hrv",
+    "sleep_debt_hours",
+    "screen_time_minutes",
+    "calendar_load",
+    "temperature_c",
+    "barometric_pressure_hpa",
+    "solar_pressure_index",
+    "uv_index",
+    "ambient_noise_db",
+    "weather_condition",
+    "trigger_score",
+    "migraine_probability"
+  ],
+  "label": "migraine_label",
+  "user_profiles": [
+    {
+      "user_id": "user_000",
+      "resting_hr": 69.21886831901773,
+      "resting_hrv": 64.60015893759504,
+      "sleep_need": 8.287896879867073,
+      "screen_intensity": 0.748684014529682,
+      "calendar_intensity": 0.34708867394382475
+    },
+    {
+      "user_id": "user_001",
+      "resting_hr": 58.615786578903645,
+      "resting_hrv": 65.77121048978154,
+      "sleep_need": 7.824191451141949,
+      "screen_intensity": 0.8539300948142874,
+      "calendar_intensity": 0.3557413090043575
+    },
+    {
+      "user_id": "user_002",
+      "resting_hr": 69.91569270110145,
+      "resting_hrv": 66.49646598371288,
+      "sleep_need": 7.961581298496984,
+      "screen_intensity": 0.850429715404244,
+      "calendar_intensity": 0.345459959927409
+    },
+    {
+      "user_id": "user_003",
+      "resting_hr": 67.15386063343168,
+      "resting_hrv": 91.03468700765802,
+      "sleep_need": 7.2301551665882196,
+      "screen_intensity": 0.8696279631146548,
+      "calendar_intensity": 0.4873020903936104
+    },
+    {
+      "user_id": "user_004",
+      "resting_hr": 75.2825388512916,
+      "resting_hrv": 81.6296991104592,
+      "sleep_need": 7.302245398012312,
+      "screen_intensity": 0.5459635759131634,
+      "calendar_intensity": 0.7392222057045229
+    }
+  ]
+}

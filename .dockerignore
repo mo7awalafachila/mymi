@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.DS_Store
+.env
+.venv/
+node_modules/
+.git/
+.gitignore
+**/.ipynb_checkpoints/
+**/__pycache__/
+# Data and local artifacts (adjust if you want them in image)
+data/

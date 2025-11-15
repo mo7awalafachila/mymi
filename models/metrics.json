@@ -1,0 +1,12 @@
+{
+  "precision": 0.9881944444444445,
+  "recall": 1.0,
+  "f1": 0.9940621725462802,
+  "roc_auc": 0.8310322020586168,
+  "threshold": 0.5,
+  "avg_lead_time_minutes": 0.07378777231201687,
+  "train_users": 4,
+  "test_users": 1,
+  "train_samples": 5760,
+  "test_samples": 1440
+}

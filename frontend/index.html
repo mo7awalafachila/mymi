@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Head Start Control Panel</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Head Start Inference Console</h1>
+      <p>Interact with the FastAPI backend: ingest events, fetch predictions, and review insights.</p>
+    </header>
+
+    <section class="card" id="config-card">
+      <h2>1. Configure Connection</h2>
+      <div class="form-grid">
+        <label>
+          API Base URL
+          <input id="base-url" type="url" value="http://localhost:8000" />
+        </label>
+        <label>
+          API Token (X-API-KEY)
+          <input id="api-key" type="password" placeholder="enter token" />
+        </label>
+        <label>
+          Active User ID
+          <input id="user-id" type="text" value="user_000" />
+        </label>
+      </div>
+      <button id="save-config">Save Connection</button>
+      <p class="hint">Values sync across requests; tokens stay in-memory only.</p>
+    </section>
+
+    <section class="card" id="ingest-card">
+      <h2>2. Send Synthetic Events</h2>
+      <div class="actions">
+        <button id="generate-sample">Generate 30 sample events</button>
+        <button id="send-ingest" class="primary">POST /ingest batch</button>
+      </div>
+      <textarea id="ingest-payload" spellcheck="false" rows="12"></textarea>
+      <p class="hint">Textarea expects a JSON array of payloads. Each object maps 1:1 with the backend <code>IngestPayload</code> schema.</p>
+    </section>
+
+    <section class="card" id="predict-card">
+      <h2>3. Query Predictions</h2>
+      <div class="actions">
+        <button id="run-predict">GET /predict</button>
+        <button id="run-insights">GET /insights</button>
+        <button id="run-coach">POST /coach</button>
+        <button id="run-health">GET /health</button>
+      </div>
+      <label>
+        Optional coach context
+        <input id="coach-context" type="text" placeholder="e.g., 'Upcoming flight in 3h'" />
+      </label>
+      <div class="responses">
+        <article>
+          <h3>Prediction</h3>
+          <pre id="predict-output">(pending)</pre>
+        </article>
+        <article>
+          <h3>Insights</h3>
+          <pre id="insights-output">(pending)</pre>
+        </article>
+        <article>
+          <h3>Coach</h3>
+          <pre id="coach-output">(pending)</pre>
+        </article>
+        <article>
+          <h3>Health</h3>
+          <pre id="health-output">(pending)</pre>
+        </article>
+      </div>
+    </section>
+
+    <section class="card" id="status-card">
+      <h2>Status</h2>
+      <pre id="status">Ready. Configure connection to begin.</pre>
+    </section>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
